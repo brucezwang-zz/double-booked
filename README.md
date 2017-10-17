@@ -10,15 +10,11 @@ Download from http://example.com/FIXME.
 
 ## Usage
 
-This program takes sets of 10 date and time strings representing
-events in the following format:
+This program takes sets of 10 date and time strings representing events in the following format:
   startYear startMonth startDay startHour startMinute
   endYear endMonth endDay endHour endMinute
 
-where startYear to startMinute denotes the start time of the event and
-endYear to endMinute denotes the end time of the event. This format is repeated
-for events to be passed. The program prints all pairs of events that overlap
-with eachother.
+Where startYear to startMinute denotes the start time of the event and endYear to endMinute denotes the end time of the event. This format is repeated for all events to be passed. The program prints all pairs of events that overlap with eachother.
 
     $ java -jar double-booked-0.1.0-standalone.jar [args]
 
@@ -28,19 +24,7 @@ none
 
 ## Examples
 
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
-
-## License
-
-Copyright © 2017 FIXME
-
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+Input:
+java -jar double-booked-0.1.0-standalone.jar 2016 5 11 13 30 2017 1 1 12 0 2016 4 11 17 0 2016 5 11 13 0 2016 4 10 12 0 2017 0 0 0 0
+Output:
+(((#inst "2016-04-10T12:00:00.000-04:00" #inst "2016-11-30T00:00:00.000-05:00") (#inst "2016-04-11T17:00:00.000-04:00" #inst "2016-05-11T13:00:00.000-04:00")) ((#inst "2016-04-10T12:00:00.000-04:00" #inst "2016-11-30T00:00:00.000-05:00") (#inst "2016-05-11T13:30:00.000-04:00" #inst "2017-01-01T12:00:00.000-05:00")))
